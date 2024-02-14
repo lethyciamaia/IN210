@@ -7,6 +7,11 @@
 #include "cmocka.h"
 #include <string.h>
 #include "ratp.h"
+#include "age.h"
+
+void recupAge(int * age) {
+    *age=(int)mock();
+}
 
 /* A test case that does nothing and succeeds. */
 
@@ -31,22 +36,26 @@ static void null_test_success(void **state) {
 // }
 static void test_price_12yo_local() {
     float actualPrice;
+    will_return(recupAge,12);
     actualPrice = computePrice(12, 0);
     assert_float_equal (0.75, actualPrice, 0.001);
 }
 static void test_price_12yo_turist() {
-    float actualPrice;
+    float actualPrice;  
+    will_return(recupAge,12);
     actualPrice = computePrice(12, 1);
     assert_true(actualPrice == 1.5); // Q2
     // assert_float_equal (1.5, actualPrice, 0.001);
 }
 static void test_price_13yo_local() {
     float actualPrice;
+    will_return(recupAge,12);
     actualPrice = computePrice(13, 0);
     assert_float_equal (1.5, actualPrice, 0.001);
 }
 static void test_price_13yo_turist() {
     float actualPrice;
+    will_return(recupAge,12);
     actualPrice = computePrice(13, 1);
     assert_float_equal (3, actualPrice, 0.001);
 }

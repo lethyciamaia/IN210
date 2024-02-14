@@ -2,32 +2,14 @@
 
 static const float Price = 1.5;
 
-float computePrice(int age, int tourist)
+float computePrice(int age, int turist)
 {
     int limitAge;
     int *plimit = &limitAge;
 
     recupAge(plimit);
     if (age>limitAge)
-        return Price;
+        return turist ? Price*2 : Price;
     else 
-        return Price/2;
+        return turist ? Price : Price/2;
 }
-
-/*
-* First version:
-
-float computePrice(int age, int tourist)
-{
-    if (age>12)
-    {
-        if (tourist) return Price*2;
-        return Price;
-    }
-    else 
-    {
-        if (tourist) return Price;
-        return Price/2;
-    }
-}
-*/

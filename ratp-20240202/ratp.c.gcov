@@ -1,0 +1,29 @@
+        -:    0:Source:ratp.c
+        -:    0:Graph:ratp.gcno
+        -:    0:Data:ratp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:static const float Price = 1.5;
+        -:    2:
+function computePrice called 4 returned 100% blocks executed 100%
+        4:    3:float computePrice(int age, int tourist)
+        -:    4:{
+        4:    5:    if (age>12)
+branch  0 taken 2
+branch  1 taken 2
+        -:    6:    {
+        2:    7:        if (tourist)
+branch  0 taken 1
+branch  1 taken 1
+        1:    8:            return Price*2;
+        1:    9:        return Price;
+        -:   10:    }
+        -:   11:    else 
+        -:   12:    {
+        2:   13:        if (tourist)
+branch  0 taken 1
+branch  1 taken 1
+        1:   14:            return Price;
+        1:   15:        return Price/2;
+        -:   16:    }
+        4:   17:}

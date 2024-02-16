@@ -26,4 +26,5 @@ mrproper: clean
 
 testcoverage:
 	gcov -b -c ratp.c
-	gcovr --html-details result.html -f ratp.c
+
+	gcovr --cobertura toto.xml -f ratp.c

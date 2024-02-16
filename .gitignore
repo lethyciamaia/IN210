@@ -57,3 +57,29 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# Arquivos de configuração do Visual Studio Code
+.vscode/
+
+# Arquivos de configuração do usuário do Visual Studio Code
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+
+# Arquivos de histórico do Visual Studio Code
+.vscode/history
+
+# Arquivos de cache do Visual Studio Code
+.vscode/.cache
+.vscode/.history
+
+# Arquivos de log do Visual Studio Code
+.vscode/logs
+
+# Arquivos de backup do Visual Studio Code
+.vscode/backup
+
+# Outros arquivos específicos do Visual Studio Code
+.vscode/*.code-workspace
+.vscode/*.suo
+.vscode/*.sln

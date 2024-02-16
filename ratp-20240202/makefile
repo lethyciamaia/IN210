@@ -26,4 +26,4 @@ mrproper: clean
 
 testcoverage:
 	gcov -b -c ratp.c
-	gcovr --cobertura toto.xml -f ratp.c
+	/Users/lethyciamaia/anaconda3/lib/python3.11/site-packages/gcovr --cobertura toto.xml -f ratp.c

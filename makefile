@@ -5,18 +5,18 @@ LDFLAGS = -lcmocka --coverage
 SRCS = ratp.c main.c 
 OBJS = $(SRCS:.c=.o)
 
-all: testAll
+all: testAll.exe
 
-testAll: $(OBJS)
+testAll.exe: $(OBJS)
 	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LDFLAGS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@ -fprofile-arcs -ftest-coverage
 
 clean:
-	rm -f $(OBJS) testAll
+	del /Q $(OBJS) testAll.exe
 
 mrproper:  clean
-	rm -f ratp.g*
-	rm -f main.g*
-	rm -f result.*
+	del /Q ratp.g*
+	del /Q main.g*
+	del /Q result.*

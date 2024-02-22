@@ -1,4 +1,4 @@
-# IN210 TD2
+# TD2
 
 ## Groupe
 

@@ -7,6 +7,7 @@ Test Teardown    Fermer Prestashop
 ${monPrestashopAddr}    http://www.qualifiez.fr/monPrestashop2/prestashop/index.php?
 ${searchedItemxPath}    //*[@id="search_widget"]/form/input[2]
 ${menuxPath}    //*[starts-with(@id, "category-")]/
+${logoPath}    //*[@id="_desktop_logo"]/*
 
 *** Test Cases ***
 test
@@ -69,7 +70,7 @@ Mouse hover
     ${subelem}    Find element in menu    ${path}/descendant::    ${subcategory}
     Element Should Be Visible    ${subelem}
     Mouse Out    ${elem}
-    # Je sais pas pourquoi mais il prend beaucoup de temps pour disparetre quelques fois
-    # C'est pourquoi j'ai mis 15s de attente.
-    Wait Until Element Is Not Visible    ${subelem}    15s
+    # Positionne le souris loin du menu et du sousmenu
+    Mouse Over    ${logoPath} 
+    Wait Until Element Is Not Visible    ${subelem}    5s
     

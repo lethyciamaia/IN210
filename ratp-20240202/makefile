@@ -20,10 +20,12 @@ clean:
 
 mrproper: clean
 	rm ratp.g*
+	rm ratp.c.gcov
 	rm main.g*
 	rm testAll
 	rm result.*
 
 testcoverage:
 	gcov -b -c ratp.c
-	/Users/lethyciamaia/anaconda3/lib/python3.11/site-packages/gcovr --cobertura toto.xml -f ratp.c
+	gcovr --cobertura toto.xml -f ratp.c
+

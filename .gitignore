@@ -83,3 +83,13 @@ Temporary Items
 .vscode/*.code-workspace
 .vscode/*.suo
 .vscode/*.sln
+
+# tp 
+*.gcov
+*.c.gcov
+*.gcda
+*.html
+*.xml
+*.png
+result.*
+testAll
